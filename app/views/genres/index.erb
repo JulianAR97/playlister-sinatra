@@ -1,0 +1,9 @@
+<h2>Genres</h2>
+
+<ul>
+    <% Genre.all.sort_by(&:name).each do |genre| %>
+        <a href="/genres/<%=genre.slug%>">
+            <li><%=genre.name%></li>
+        </a>
+    <% end %>
+</ul>
